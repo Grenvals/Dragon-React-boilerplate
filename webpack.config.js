@@ -2,7 +2,7 @@ module.exports = {
   mode: "development",
   module: {
     rules: [
-      // Images
+      // JS
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -12,6 +12,7 @@ module.exports = {
           },
         ],
       },
+      // CSS
       {
         test: /\.css$/,
         use: [
@@ -23,6 +24,22 @@ module.exports = {
           },
         ],
       },
+      // Sass
+      {
+        test: /\.(s[ca]ss)$/,
+        use: [
+          {
+            loader: "style-loader",
+          },
+          {
+            loader: "css-loader",
+          },
+          {
+            loader: "sass-loader",
+          },
+        ],
+      },
+      // Images
       {
         test: /\.(png|jpg|gif|ico)$/,
         use: [

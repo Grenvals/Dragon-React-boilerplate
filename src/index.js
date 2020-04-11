@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM, { render } from "react-dom";
 import img from "./react.png";
-import "./scss/css.css";
+import "./scss/scss.scss";
 
 const App = () => <img src={img} alt="" />;
 
