@@ -1,4 +1,5 @@
-const htmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: "development",
@@ -13,12 +14,12 @@ module.exports = {
       // CSS
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       // Sass
       {
         test: /\.(s[ca]ss)$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       // Images
       {
@@ -49,10 +50,16 @@ module.exports = {
     ],
   },
   plugins: [
-    new htmlWebpackPlugin({
+    new HtmlWebpackPlugin({
       title: "Hellow world",
       buildTime: new Date().toISOString(),
       template: "public/index.html",
     }),
+    new MiniCssExtractPlugin({
+      filename: "main-[hash:8].css",
+    }),
   ],
+  devServer: {
+    open: true,
+  },
 };
