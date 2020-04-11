@@ -6,38 +6,17 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: "babel-loader",
-          },
-        ],
+        loader: "babel-loader",
       },
       // CSS
       {
         test: /\.css$/,
-        use: [
-          {
-            loader: "style-loader",
-          },
-          {
-            loader: "css-loader",
-          },
-        ],
+        use: ["style-loader", "css-loader"],
       },
       // Sass
       {
         test: /\.(s[ca]ss)$/,
-        use: [
-          {
-            loader: "style-loader",
-          },
-          {
-            loader: "css-loader",
-          },
-          {
-            loader: "sass-loader",
-          },
-        ],
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       // Images
       {
