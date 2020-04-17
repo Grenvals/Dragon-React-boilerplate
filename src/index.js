@@ -1,8 +1,13 @@
 import React from "react";
-import ReactDOM, { render } from "react-dom";
-import img from "./react.png";
-import "./scss/scss.scss";
+import ReactDOM from "react-dom";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
 
-const App = () => <img src={img} alt="" />;
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
 
-ReactDOM.render(<App />, document.getElementById("root"));
+serviceWorker.unregister();
