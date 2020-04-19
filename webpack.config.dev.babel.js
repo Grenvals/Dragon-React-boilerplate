@@ -7,6 +7,7 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import autoprefixer from "autoprefixer";
 
 module.exports = {
+  mode: "development",
   devtool: false,
   entry: {
     main: ["@babel/polyfill", "./src/index.js"],
