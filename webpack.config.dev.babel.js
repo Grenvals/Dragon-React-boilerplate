@@ -1,6 +1,7 @@
 import "@babel/polyfill";
 
 import webpack from "webpack";
+import path from "path";
 
 import HtmlWebpackPlugin from "html-webpack-plugin";
 
@@ -20,11 +21,15 @@ module.exports = {
     port: 3000,
     hot: true,
   },
+  resolve: {
+    extensions: [".jsx", ".js", "*"],
+    modules: [path.resolve(__dirname, "src"), "node_modules"],
+  },
   module: {
     rules: [
       // JS
       {
-        test: /\.(jsx?)$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: [
           {

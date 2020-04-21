@@ -15,11 +15,11 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/Grenvals/Test/blob/master/README.md"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          How to start
         </a>
       </header>
     </div>

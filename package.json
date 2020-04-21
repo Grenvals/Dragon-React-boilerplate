@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "webpack-dev-server --mode development --config webpack.config.dev.babel.js --open",
+    "start": "webpack-dev-server --config webpack.config.dev.babel.js --open",
     "build": "webpack --config webpack.config.prod.babel.js"
   },
   "repository": {
@@ -25,7 +25,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
-    "clean-webpack-plugin": "^3.0.0",
+    "clean-webpack-plugin": "^1.0.1",
     "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^2.1.0",
     "eslint": "^5.14.1",
@@ -49,7 +49,6 @@
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.29.5",
-    "webpack-bundle-analyzer": "^3.8.0",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.11.0"
   },
